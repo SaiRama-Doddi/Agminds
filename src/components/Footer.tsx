@@ -70,7 +70,7 @@ const Footer = () => {
   </div>
 
   {/* Brand Name */}
-  <span className="
+ {/*  <span className="
     text-xl sm:text-2xl
     font-bold
     bg-gradient-to-r from-[#677845] to-[#5B5B29]
@@ -79,7 +79,7 @@ const Footer = () => {
     whitespace-nowrap
   ">
     AgMinds
-  </span>
+  </span> */}
 </Link>
             </div>
             <p className="text-emerald-100/80 leading-relaxed">

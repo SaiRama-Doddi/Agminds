@@ -42,14 +42,7 @@ const LearnSection = () => {
     },
   ];
 
-  const resources = [
-    'Video Library with concept-based learning',
-    'Observation guides for outdoor exploration',
-    'Activity suggestions for families and educators',
-    'Seasonal learning calendars',
-    'Community discussion forums',
-    'Resource downloads and worksheets',
-  ];
+
 
   return (
     <section id="learn" ref={ref} className="py-24 bg-white relative overflow-hidden">
@@ -63,21 +56,35 @@ const LearnSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-6 py-2 bg-[#c8d09b] text-[#798237] rounded-full text-sm font-semibold mb-6">
+          <span   className="inline-block px-8 py-3 rounded-full mb-8"  style={{
+    background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
+    color: '#1F3D2B', // Deep Forest Green
+    border: '1.5px solid #C8A24A', // Soft Sun Ochre
+    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
+    fontSize: '1.1rem',
+    fontWeight: 600,
+    letterSpacing: '0.08em'
+  }}>
             Learning Resources
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6"  style={{
+   
+    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif"
+  }}>
             Explore &{' '}
             <span className="bg-gradient-to-r from-[#776833] to-[#798237] bg-clip-text text-transparent">
               Discover
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" style={{
+ 
+    fontFamily: "'Inter', 'Source Sans 3', 'IBM Plex Sans', sans-serif"
+  }}>
             Dive into our carefully curated content across key themes in nature education.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid md:grid-cols-4 gap-8 mb-20">
           {themes.map((theme, index) => (
             <motion.div
               key={theme.title}
@@ -120,20 +127,7 @@ const LearnSection = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
             <div className="relative z-10">
               <h3 className="text-3xl font-bold mb-8">Additional Resources</h3>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {resources.map((resource, index) => (
-                  <motion.div
-                    key={resource}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                    transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center space-x-3"
-                  >
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full flex-shrink-0"></div>
-                    <span className="text-emerald-100">{resource}</span>
-                  </motion.div>
-                ))}
-              </div>
+              
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

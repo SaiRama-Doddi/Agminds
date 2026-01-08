@@ -39,32 +39,49 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <span className="inline-block px-6 py-2 bg-[#c8d09b] text-[#798237] rounded-full text-sm font-semibold mb-6">
+            {/* <span className="inline-block px-6 py-2 bg-[#c8d09b] text-[#798237] rounded-full text-sm font-semibold mb-6">
               Growing Curious Minds
-            </span>
+            </span> */}
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight"
-          >
-            AgMinds helps children{' '}
-            <span className="bg-[#798237] to-emerald-700 bg-clip-text text-transparent">
-              understand nature
-            </span>{' '}
-            — before they are asked to protect it.
-          </motion.h1>
+        <motion.h1
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-8 leading-tight"
+  style={{
+    color: '#1F3D2B',
+    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif"
+  }}
+>
+  AgMinds helps children{' '}
+  <span
+    style={{
+      color: '#C8A24A',
+      fontWeight: 600
+    }}
+  >
+    understand nature
+  </span>{' '}
+  before they are asked to protect it.
+</motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed"
-          >
-            In an increasingly structured and screen-driven world, AgMinds creates space for curiosity, observation, and meaningful understanding of soil, water, food, and natural cycles.
-          </motion.p>
+
+         <motion.p
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  className="text-xl sm:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed"
+  style={{
+    color: '#7A5C42',
+    fontFamily: "'Inter', 'Source Sans 3', 'IBM Plex Sans', sans-serif"
+  }}
+>
+  In an increasingly structured and screen-driven world, AgMinds creates space for curiosity, observation, and meaningful understanding of{' '}
+  <span style={{ color: '#9CAF88', fontWeight: 500 }}>
+    soil, water, food, and natural cycles
+  </span>.
+</motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -81,36 +98,13 @@ const HeroSection = () => {
             </a>
             <a
               href="#collaborate"
-              className="px-8 py-4 bg-white text-emerald-700 border-2 border-emerald-600 rounded-full font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-white text-[#776833] border-2 border-[#776833] rounded-full font-semibold text-lg hover:bg-emerald-50 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Collaborate With Us
             </a>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {[
-              { label: 'Outdoor Learning', value: 'Nature First' },
-              { label: 'Concept-Based', value: 'Deep Understanding' },
-              { label: 'All Ages', value: 'Inclusive' },
-              { label: 'Real Examples', value: 'Practical' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="text-2xl font-bold text-emerald-700 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
+      
         </div>
       </div>
 
@@ -119,11 +113,11 @@ const HeroSection = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="w-6 h-10 border-2 border-emerald-600 rounded-full flex justify-center p-2">
+          <div className="w-6 h-10 border-2 border-[#776833] rounded-full flex justify-center p-2">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-emerald-600 rounded-full"
+              className="w-1.5 h-1.5 bg-[#776833] rounded-full"
             />
           </div>
         </motion.div>

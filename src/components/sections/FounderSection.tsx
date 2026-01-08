@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Quote, Heart, Target, Compass } from 'lucide-react';
+import {  Heart, Target, Compass } from 'lucide-react';
 
 const FounderSection = () => {
   const ref = useRef(null);
@@ -37,10 +37,18 @@ const FounderSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-6 py-2 bg-[#c8d09b] text-[#798237] rounded-full text-sm font-semibold mb-6">
+          <span className="inline-block px-8 py-3 rounded-full mb-8"  style={{
+    background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
+    color: '#1F3D2B', // Deep Forest Green
+    border: '1.5px solid #C8A24A', // Soft Sun Ochre
+    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
+    fontSize: '1.1rem',
+    fontWeight: 600,
+    letterSpacing: '0.08em'
+  }}>
             Founder's Note
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6">
             Why{' '}
             <span className="bg-gradient-to-r from-[#776833] to-[#798237] bg-clip-text text-transparent">
               AgMinds
@@ -57,7 +65,7 @@ const FounderSection = () => {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
-            <Quote className="w-16 h-16 text-emerald-400/30 mb-8" />
+      
             <div className="relative z-10 space-y-6 text-lg leading-relaxed text-emerald-50">
               <p>
                 <strong className="text-white text-xl">AgMinds began with a simple observation:</strong> many children and adults are asked to care about nature without ever being given the space to truly understand it.
