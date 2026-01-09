@@ -118,7 +118,7 @@ const AboutSection = () => {
 
          <motion.div
   variants={itemVariants}
-  className="relative bg-gradient-to-r from-[#393d1e] to-[#846c39]
+  className="relative bg-[#664433]
              rounded-3xl pt-12 pb-24 px-12 text-white shadow-2xl overflow-hidden"
 >
   {/* Content */}
