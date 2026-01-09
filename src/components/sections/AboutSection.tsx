@@ -4,6 +4,38 @@ import { useRef } from 'react';
 import { BookOpen, Target, Heart, Eye } from 'lucide-react';
 
 const AboutSection = () => {
+
+
+   const cards = [
+    {
+      title: 'Nature The Teacher',
+      description:
+        'Hands-on exploration, curiosity-led discovery, and meaningful moments in nature.',
+      image:
+        'https://img.freepik.com/premium-photo/students-exploring-local-ecosystems-environmental-education-nature-hike_38013-79689.jpg',
+    },
+    {
+      title: 'Outdoor Learning',
+      description:
+        'Resilience and confidence grow through rain, mud, sunshine, and play.',
+      image:
+        'https://worldofeducation.tts-group.co.uk/wp-content/uploads/2023/02/iStock-484592828-min.jpg',
+    },
+    {
+      title: 'Holistic Development',
+      description:
+        'Social, emotional, and cognitive growth nurtured together in nature.',
+      image:
+        'https://2716595.fs1.hubspotusercontent-na1.net/hubfs/2716595/whole-child-approach_11zon.jpg',
+    },
+    {
+      title:  'Real World Skills',
+      description:
+        'From collaboration to problem-solving, skills that stay for life.',
+      image:
+        'https://news.uga.edu/wp-content/uploads/2021/03/Kids_and_learning.jpg',
+    },
+  ];
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -26,32 +58,7 @@ const AboutSection = () => {
     },
   };
 
-  const features = [
-    {
-      icon: BookOpen,
-      title: 'What is AgMinds?',
-      description: 'An independent education initiative that supports children in reconnecting with nature through concept-based learning.',
-      color: 'from-[#795757] to-[#664343]',
-    },
-    {
-      icon: Target,
-      title: 'Our Focus',
-      description: 'Rather than teaching techniques or skills, AgMinds helps children make sense of what they experience in the natural world.',
-         color: 'from-[#795757] to-[#664343]',
-    },
-    {
-      icon: Heart,
-      title: 'Why It Matters',
-      description: "Today's conversations around sustainability often begin without foundational understanding. AgMinds builds that foundation early.",
-      color: 'from-[#795757] to-[#664343]',
-    },
-    {
-      icon: Eye,
-      title: 'The Outcome',
-      description: 'Care for nature grows naturally, not as an obligation — calmly, clearly, and without pressure.',
-       color: 'from-[#795757] to-[#664343]',
-    },
-  ];
+
 
   return (
     <section id="about" ref={ref} className="py-24 bg-[#fbebd5] relative overflow-hidden">
@@ -66,23 +73,30 @@ const AboutSection = () => {
           className="max-w-7xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-  <span
-  className="inline-block px-8 py-3 rounded-full mb-8"
-  style={{
-      background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
-    color: 'white', // Deep Forest Green
-    border: '1.5px solid #C8A24A', // Soft Sun Ochre
-    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
-    fontSize: '1.1rem',
-    fontWeight: 600,
-    letterSpacing: '0.08em'
-  }}
->
-  About AgMinds
-</span>
+   <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              mb-6
+              leading-tight
+              uppercase
+              tracking-wide
+            "
+            style={{
+              color: 'black', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.04em',
+            }}
+          >
+            What Makes us Different
+          </motion.h1>
 
 
-            <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6"   style={{
+            <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6 font-serifSoft"   style={{
    
     fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif"
   }}>
@@ -91,7 +105,7 @@ const AboutSection = () => {
                 Protection
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" style={{
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed " style={{
  
     fontFamily: "'Inter', 'Source Sans 3', 'IBM Plex Sans', sans-serif"
   }}>
@@ -99,47 +113,60 @@ const AboutSection = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-20">
-            {features.map((feature, index) => (
+          {/* Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          {cards.map((card, index) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="text-center"
+            >
               <motion.div
-                key={feature.title}
-                variants={itemVariants}
-                className="group relative bg-gradient-to-br from-white to-emerald-50/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-emerald-100/50 hover:border-emerald-200 hover:-translate-y-2"
+                whileHover={{ scale: 1.08, y: -8 }}
+                transition={{ type: 'spring', stiffness: 180, damping: 14 }}
+                className="mx-auto w-56 h-56 rounded-full overflow-hidden shadow-xl"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-100/20 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500"></div>
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
-            ))}
-          </div>
 
-         <motion.div
-  variants={itemVariants}
-  className="relative bg-[#664433]
-             rounded-3xl pt-12 pb-24 px-12 text-white shadow-2xl overflow-hidden"
->
+              <h3 className="mt-8 text-xl font-medium text-[#3b2f1e]  leading-tight
+              uppercase
+              tracking-wide"
+            
+            style={{
+              color: 'black', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.04em',
+            }}>
+                {card.title}
+              </h3>
+             <p className="
+  mt-3
+  px-4
+  text-sm
+  leading-relaxed
+  text-black
+  font-serifSoft
+">
+  {card.description}
+</p>
+
+            </motion.div>
+          ))}
+        </div>
+
+
   {/* Content */}
-  <div className="relative z-10">
-    <h3 className="text-3xl sm:text-4xl font-bold mb-6">
-      Our Belief
-    </h3>
 
-    <p className="text-xl text-[emerald-100] leading-relaxed mb-6">
-      “When children understand nature, care follows naturally.”
-    </p>
-
-    <p className="text-emerald-200 leading-relaxed max-w-3xl">
-      We believe that understanding is the beginning of change — and that when
-      children are given the language to understand nature, they carry that
-      awareness for life.
-    </p>
-  </div>
 
   {/* WAVE CUT */}
-  <div className="absolute bottom-0 left-0 w-full leading-none">
+{/*   <div className="absolute bottom-0 left-0 w-full leading-none">
     <svg
       viewBox="0 0 1440 100"
       preserveAspectRatio="none"
@@ -155,8 +182,8 @@ const AboutSection = () => {
         fill="#ffff"
       />
     </svg>
-  </div>
-</motion.div>
+  </div> */}
+
 
         </motion.div>
       </div>

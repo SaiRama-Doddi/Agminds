@@ -45,7 +45,7 @@ const LearnSection = () => {
 
 
   return (
-    <section id="learn" ref={ref} className="py-24 bg-[#fbebd5] relative overflow-hidden">
+    <section id="learn" ref={ref} className="py-24  bg-[#664343] relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.05),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(20,184,166,0.05),transparent_50%)]"></div>
 
@@ -56,27 +56,34 @@ const LearnSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span   className="inline-block px-8 py-3 rounded-full mb-8"  style={{
-   background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
-    color: 'white', // Deep Forest Green
-    border: '1.5px solid #C8A24A', // Soft Sun Ochre
-    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
-    fontSize: '1.1rem',
-    fontWeight: 600,
-    letterSpacing: '0.08em'
-  }}>
-            Learning Resources
-          </span>
-          <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6"  style={{
-   
-    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif"
-  }}>
+        <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              mb-6
+              leading-tight
+              uppercase
+              tracking-wide
+            "
+            style={{
+              color: 'white', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.04em',
+            }}
+          >
+           Learning Resources
+          </motion.h1>
+          <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-white mb-6 font-serifSoft"  >
             Explore &{' '}
-            <span className="bg-gradient-to-r from-[#776833] to-[#798237] bg-clip-text text-transparent">
+            <span className="text-white bg-clip-text text-transparent">
               Discover
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" style={{
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed" style={{
  
     fontFamily: "'Inter', 'Source Sans 3', 'IBM Plex Sans', sans-serif"
   }}>
@@ -84,37 +91,6 @@ const LearnSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-4 gap-8 mb-20">
-          {themes.map((theme, index) => (
-            <motion.div
-              key={theme.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative"
-            >
-              <div className={`relative ${theme.bgColor} rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-emerald-200 overflow-hidden`}>
-                <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
-                  <theme.icon className="w-full h-full" />
-                </div>
-                <div className="relative z-10">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${theme.color} mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <theme.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{theme.title}</h3>
-                  <p className="text-gray-700 leading-relaxed mb-6">{theme.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-semibold text-gray-600">{theme.videos}</span>
-                    <button className="flex items-center space-x-2 px-6 py-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 font-medium text-gray-800">
-                      <Play className="w-4 h-4" />
-                      <span>Watch Now</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -122,20 +98,20 @@ const LearnSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-[#664433] to-[#897e3a] rounded-3xl p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
+          <div className="bg-[#FBF7E8] rounded-3xl p-10 lg:p-12 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gray-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gray-500/10 rounded-full blur-3xl"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-8">Additional Resources</h3>
+              <h3 className="text-3xl font-bold mb-8 text-black">Additional Resources</h3>
               
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="mt-8 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
+                className="mt-8 p-6 bg-black/10 backdrop-blur-sm rounded-xl border border-white/20"
               >
-                <p className="text-emerald-200 text-lg">
-                  <span className="font-semibold text-white">Coming Soon:</span> Interactive learning modules, downloadable guides, and community learning circles.
+                <p className="text-black text-lg">
+                  <span className="font-semibold text-black">Coming Soon:</span> Interactive learning modules, downloadable guides, and community learning circles.
                 </p>
               </motion.div>
             </div>

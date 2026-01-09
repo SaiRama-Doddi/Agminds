@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
-import ApproachSection from '../components/sections/ApproachSection';
 import LearnSection from '../components/sections/LearnSection';
 import CollaborateSection from '../components/sections/CollaborateSection';
 import FounderSection from '../components/sections/FounderSection';
+import Hero from '../components/sections/Hero';
 
 const Home = () => {
   return (
@@ -14,10 +14,11 @@ const Home = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <Hero/>
       <SEO />
       <HeroSection />
       <AboutSection />
-      <ApproachSection />
+
       <LearnSection />
       <CollaborateSection />
       <FounderSection />

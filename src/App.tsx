@@ -5,17 +5,27 @@ import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import ComingSoon from './components/sections/ComingSoon';
+import FounderSection from './components/sections/FounderSection';
+import AboutSection from './components/sections/AboutSection';
+import ScrollToTop from './components/sections/ScrollToTop';
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen flex flex-col">
+        <ScrollToTop/>
+        <div className="min-h-screen flex flex-col bg-[#fbebd5]">
           <Header />
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/coming-soon" element={<ComingSoon />} />
+              <Route path="/founder" element={<FounderSection/>}/>
+              <Route path="/about" element={<AboutSection/>}/>
+
+
             </Routes>
           </main>
           <Footer />

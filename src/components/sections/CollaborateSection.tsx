@@ -56,29 +56,39 @@ const CollaborateSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span  className="inline-block px-8 py-3 rounded-full mb-8"  style={{
-  background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
-    color: 'white', // Deep Forest Green
-    border: '1.5px solid #C8A24A', // Soft Sun Ochre
-    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
-    fontSize: '1.1rem',
-    fontWeight: 600,
-    letterSpacing: '0.08em'
-  }}>
-            Collaborate With Us
-          </span>
-          <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6">
+       <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              mb-6
+              leading-tight
+              uppercase
+              tracking-wide
+            "
+            style={{
+              color: 'black', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.04em',
+            }}
+          >
+           Collaborate With Us
+          </motion.h1>
+          <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6 font-serifSoft">
             Let's Grow{' '}
             <span className="bg-gradient-to-r from-[#776833] to-[#798237] bg-clip-text text-transparent">
               Together
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-serifSoft">
             Partner with AgMinds to bring meaningful nature education to your community.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid md:grid-cols-4 gap-8 mb-20">
           {partners.map((partner, index) => (
             <motion.div
               key={partner.title}
@@ -92,16 +102,27 @@ const CollaborateSection = () => {
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${partner.color} mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                   <partner.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{partner.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{partner.description}</p>
-                <ul className="space-y-3">
-                  {partner.features.map((feature) => (
-                    <li key={feature} className="flex items-center space-x-3 text-gray-700">
-                      <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-2xl font-normal text-gray-900 mb-3 "  style={{
+              color: 'black', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.06em',
+            }}>{partner.title}</h3>
+               <p className="text-gray-600 leading-relaxed mb-6 font-serifSoft">
+  {partner.description}
+</p>
+
+<ul className="space-y-3 font-serifSoft">
+  {partner.features.map((feature) => (
+    <li
+      key={feature}
+      className="flex items-center space-x-3 text-gray-700"
+    >
+      <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0" />
+      <span>{feature}</span>
+    </li>
+  ))}
+</ul>
+
               </div>
             </motion.div>
           ))}
@@ -115,7 +136,7 @@ const CollaborateSection = () => {
         >
           <div className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100">
             <h3 className="text-3xl font-bold text-gray-900 mb-10 text-center">How Partnership Works</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
               {process.map((item, index) => (
                 <motion.div
                   key={item.step}

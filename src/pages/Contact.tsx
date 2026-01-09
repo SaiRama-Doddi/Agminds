@@ -3,6 +3,7 @@ import { useState } from 'react';
 import SEO from '../components/SEO';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -72,7 +73,7 @@ const Contact = () => {
         description="Get in touch with AgMinds to learn more about our nature education programs, collaborate with us, or ask any questions."
       />
 
-      <section className="py-24 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 relative overflow-hidden">
+      <section className="py-24 bg-[#fbebd5] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwNTk2NjkiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -82,18 +83,27 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span  className="inline-block px-8 py-3 rounded-full mb-8"
-  style={{
-    background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
-    color: '#1F3D2B', // Deep Forest Green
-    border: '1.5px solid #C8A24A', // Soft Sun Ochre
-    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
-    fontSize: '1.1rem',
-    fontWeight: 600,
-    letterSpacing: '0.08em'
-  }}>
-              Get in Touch
-            </span>
+            <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              mb-6
+              leading-tight
+              uppercase
+              tracking-wide
+            "
+            style={{
+              color: 'black', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.04em',
+            }}
+          >
+          Get in Touch
+          </motion.h1>
             <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6">
               Let's{' '}
               <span className="bg-gradient-to-r from-[#776833] to-[#798237] bg-clip-text text-transparent">
@@ -202,7 +212,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-[#776833] to-[#798237] text-white rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                    className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-[#664343] text-white rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                   >
                     <Send className="w-5 h-5" />
                     <span>Send via WhatsApp</span>
@@ -221,7 +231,7 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="space-y-6"
             >
-              <div className="bg-gradient-to-r from-[#776833] to-[#798237] rounded-3xl p-8 lg:p-10 text-white shadow-2xl relative overflow-hidden">
+              <div className=" bg-[#664343] rounded-3xl p-8 lg:p-10 text-white shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl"></div>
                 <div className="relative z-10">

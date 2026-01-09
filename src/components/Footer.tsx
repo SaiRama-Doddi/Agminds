@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Sprout, Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import {  Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,45 +47,57 @@ const Footer = () => {
   {/* Logo wrapper */}
   <div className="relative flex-shrink-0">
     {/* Glow */}
-    <div className="absolute inset-0 bg-emerald-500/20 rounded-full blur-xl 
-                    group-hover:bg-emerald-500/30 transition-all duration-300" />
+    <div className="absolute inset-0  rounded-full blur-xl 
+                     transition-all duration-300" />
 
     {/* Logo Image */}
-   <img
-  src="/logo.jpeg"
-  alt="AgMinds Logo"
-  className="
-    relative z-10
-    w-16 h-16
-    sm:w-18 sm:h-18
-    md:w-20 md:h-18
-    lg:w-20 lg:h-20
-    object-contain
-    rounded-full
-    group-hover:scale-110
-    transition-transform
-    duration-300
-  "
-/>
-
+    <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              
+              leading-tight
+           
+              tracking-wide
+            "
+            style={{
+              color: 'white', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.04em',
+            }}
+          >
+           Agminds
+          </motion.h1>
   </div>
 
   {/* Brand Name */}
- {/*  <span className="
-    text-xl sm:text-2xl
-    font-bold
-    bg-gradient-to-r from-[#677845] to-[#5B5B29]
-    text-white
-    bg-clip-text text-transparent
-    whitespace-nowrap
-  ">
+ {/*  <span initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              mb-6
+              leading-tight
+           
+              tracking-wide
+            "
+            style={{
+              color: 'white', // soft off-white
+              fontFamily: "'Chewy', cursive",
+              letterSpacing: '0.04em',
+            }}>
     AgMinds
   </span> */}
 </Link>
             </div>
             <p className="text-emerald-100/80 leading-relaxed">
-              Helping children understand nature — before they are asked to protect it.
-              Building curious minds through concept-based learning.
+             Growing curious minds
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
