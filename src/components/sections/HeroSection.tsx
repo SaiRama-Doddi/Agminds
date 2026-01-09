@@ -10,7 +10,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#c8d09b] via-teal-50 to-[#c5d664]">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fbebd5]">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwNTk2NjkiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6bTAgMjRjMC02LjYyNyA1LjM3My0xMiAxMi0xMnMxMiA1LjM3MyAxMiAxMi01LjM3MyAxMi0xMiAxMi0xMi01LjM3My0xMi0xMnpNMCAxNmMwLTYuNjI3IDUuMzczLTEyIDEyLTEyczEyIDUuMzczIDEyIDEyLTUuMzczIDEyLTEyIDEyUzAgMjIuNjI3IDAgMTZ6bTAgMjRjMC02LjYyNyA1LjM3My0xMiAxMi0xMnMxMiA1LjM3MyAxMiAxMi01LjM3MyAxMi0xMiAxMlMwIDQ2LjYyNyAwIDQweiIvPjwvZz48L2c+PC9zdmc+')] opacity-40"></div>
 
       {floatingIcons.map(({ Icon, delay, position }, index) => (
@@ -91,7 +91,7 @@ const HeroSection = () => {
           >
             <a
               href="#learn"
-              className="group px-8 py-4 bg-gradient-to-r from-[#776833] to-[#798237] text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center space-x-2"
+              className="group px-8 py-4 bg-[#664343] text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center space-x-2"
             >
               <span>Explore Learning</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

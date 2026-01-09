@@ -45,7 +45,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          ? 'bg-[#664343] backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -67,8 +67,8 @@ const Header = () => {
     relative z-10
     w-16 h-16
     sm:w-18 sm:h-18
-    md:w-20 md:h-18
-    lg:w-20 lg:h-20
+    md:w-18 md:h-18
+    lg:w-18 lg:h-18
     object-contain
     rounded-full
     group-hover:scale-110
@@ -94,18 +94,23 @@ const Header = () => {
 
           <nav className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path + link.hash}
-                onClick={() => handleNavClick(link.hash)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-emerald-50 ${
-                  location.pathname === link.path && link.path !== '/'
-                    ? 'text-emerald-700 bg-emerald-50'
-                    : isScrolled
-                    ? 'text-gray-700 hover:text-emerald-700'
-                    : 'text-gray-800 hover:text-emerald-700'
-                }`}
-              >
+           <Link
+  key={link.name}
+  to={link.path + link.hash}
+  onClick={() => handleNavClick(link.hash)}
+  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300
+    ${
+      location.pathname === link.path && link.path !== '/'
+        ? isScrolled
+          ? 'text-white bg-emerald-600'
+          : 'text-emerald-700 bg-emerald-50'
+        : isScrolled
+        ? 'text-white hover:bg-white/10 hover:text-emerald-200'
+        : 'text-gray-800 hover:text-emerald-700 hover:bg-emerald-50'
+    }
+  `}
+>
+
                 {link.name}
               </Link>
             ))}

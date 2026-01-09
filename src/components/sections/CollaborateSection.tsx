@@ -46,7 +46,7 @@ const CollaborateSection = () => {
   ];
 
   return (
-    <section id="collaborate" ref={ref} className="py-24 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 relative overflow-hidden">
+    <section id="collaborate" ref={ref} className="py-24 bg-[#fbebd5] relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxNGI4YTYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -57,8 +57,8 @@ const CollaborateSection = () => {
           className="text-center mb-16"
         >
           <span  className="inline-block px-8 py-3 rounded-full mb-8"  style={{
-    background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
-    color: '#1F3D2B', // Deep Forest Green
+  background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
+    color: 'white', // Deep Forest Green
     border: '1.5px solid #C8A24A', // Soft Sun Ochre
     fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
     fontSize: '1.1rem',
@@ -148,7 +148,7 @@ const CollaborateSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
-          <div className="inline-block bg-gradient-to-r from-[#776833] to-[#798237] rounded-2xl p-12 text-white shadow-2xl relative overflow-hidden">
+          <div className="inline-block bg-[#664343] rounded-2xl p-12 text-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/10 rounded-full blur-3xl"></div>
             <div className="relative z-10">
               <h3 className="text-3xl font-bold mb-4">Ready to Collaborate?</h3>

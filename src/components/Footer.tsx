@@ -37,7 +37,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-[#776833] to-[#798237] text-white">
+    <footer className="bg-[#664343] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
@@ -92,7 +92,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-[#c8d09b] flex items-center justify-center hover:bg-[#c1cc82] hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-[#fbebd5] flex items-center justify-center hover:bg-[#c1cc82] hover:scale-110 transition-all duration-300"
                 >
                   <social.icon className="w-5 h-5 text-[#776833]" />
                 </a>

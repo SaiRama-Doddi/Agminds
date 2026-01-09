@@ -26,7 +26,7 @@ const FounderSection = () => {
   ];
 
   return (
-    <section id="founder" ref={ref} className="py-24 bg-white relative overflow-hidden">
+    <section id="founder" ref={ref} className="py-24 bg-[#fbebd5] relative overflow-hidden">
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-emerald-50/30 to-transparent"></div>
       <div className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-l from-teal-50/30 to-transparent"></div>
 
@@ -38,8 +38,8 @@ const FounderSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-8 py-3 rounded-full mb-8"  style={{
-    background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
-    color: '#1F3D2B', // Deep Forest Green
+      background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
+    color: 'white', // Deep Forest Green
     border: '1.5px solid #C8A24A', // Soft Sun Ochre
     fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
     fontSize: '1.1rem',
@@ -61,7 +61,7 @@ const FounderSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-r from-[#776833] to-[#798237] rounded-3xl p-10 lg:p-16 text-white shadow-2xl relative overflow-hidden mb-16"
+            className="bg-[#664433] rounded-3xl p-10 lg:p-16 text-white shadow-2xl relative overflow-hidden mb-16"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>

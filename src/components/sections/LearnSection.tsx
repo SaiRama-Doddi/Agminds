@@ -45,7 +45,7 @@ const LearnSection = () => {
 
 
   return (
-    <section id="learn" ref={ref} className="py-24 bg-white relative overflow-hidden">
+    <section id="learn" ref={ref} className="py-24 bg-[#fbebd5] relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.05),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(20,184,166,0.05),transparent_50%)]"></div>
 
@@ -57,8 +57,8 @@ const LearnSection = () => {
           className="text-center mb-16"
         >
           <span   className="inline-block px-8 py-3 rounded-full mb-8"  style={{
-    background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
-    color: '#1F3D2B', // Deep Forest Green
+   background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
+    color: 'white', // Deep Forest Green
     border: '1.5px solid #C8A24A', // Soft Sun Ochre
     fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
     fontSize: '1.1rem',
@@ -122,7 +122,7 @@ const LearnSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-[#776833] to-[#798237] rounded-3xl p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#664433] to-[#897e3a] rounded-3xl p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
             <div className="relative z-10">

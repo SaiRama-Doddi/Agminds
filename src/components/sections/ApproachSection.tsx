@@ -37,7 +37,7 @@ const ApproachSection = () => {
   ];
 
   return (
-    <section id="approach" ref={ref} className="py-28 relative overflow-hidden">
+    <section id="approach" ref={ref} className="py-28 relative overflow-hidden bg-[#fbebd5]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
 <motion.div
@@ -49,8 +49,8 @@ const ApproachSection = () => {
   <span
     className="inline-block px-8 py-3 rounded-full mb-8"
     style={{
-      background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
-      color: '#1F3D2B',
+        background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
+      color: 'white',
       border: '1.5px solid #C8A24A',
       fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
       fontSize: '1.05rem',

@@ -31,32 +31,32 @@ const AboutSection = () => {
       icon: BookOpen,
       title: 'What is AgMinds?',
       description: 'An independent education initiative that supports children in reconnecting with nature through concept-based learning.',
-      color: 'from-emerald-500 to-teal-500',
+      color: 'from-[#795757] to-[#664343]',
     },
     {
       icon: Target,
       title: 'Our Focus',
       description: 'Rather than teaching techniques or skills, AgMinds helps children make sense of what they experience in the natural world.',
-      color: 'from-teal-500 to-cyan-500',
+         color: 'from-[#795757] to-[#664343]',
     },
     {
       icon: Heart,
       title: 'Why It Matters',
       description: "Today's conversations around sustainability often begin without foundational understanding. AgMinds builds that foundation early.",
-      color: 'from-cyan-500 to-blue-500',
+      color: 'from-[#795757] to-[#664343]',
     },
     {
       icon: Eye,
       title: 'The Outcome',
       description: 'Care for nature grows naturally, not as an obligation — calmly, clearly, and without pressure.',
-      color: 'from-blue-500 to-emerald-500',
+       color: 'from-[#795757] to-[#664343]',
     },
   ];
 
   return (
-    <section id="about" ref={ref} className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-50/50 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-teal-50/50 to-transparent"></div>
+    <section id="about" ref={ref} className="py-24 bg-[#fbebd5] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/3 h-full  to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-full to-transparent"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -69,8 +69,8 @@ const AboutSection = () => {
   <span
   className="inline-block px-8 py-3 rounded-full mb-8"
   style={{
-    background: 'linear-gradient(135deg, #c8d09b, #f4f1ec, #c5d664)',
-    color: '#1F3D2B', // Deep Forest Green
+      background: 'linear-gradient(135deg, #664343, #795757, #897e3a)',
+    color: 'white', // Deep Forest Green
     border: '1.5px solid #C8A24A', // Soft Sun Ochre
     fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif",
     fontSize: '1.1rem',
@@ -118,7 +118,7 @@ const AboutSection = () => {
 
          <motion.div
   variants={itemVariants}
-  className="relative bg-gradient-to-r from-[#776833] to-[#798237]
+  className="relative bg-gradient-to-r from-[#393d1e] to-[#846c39]
              rounded-3xl pt-12 pb-24 px-12 text-white shadow-2xl overflow-hidden"
 >
   {/* Content */}
@@ -127,7 +127,7 @@ const AboutSection = () => {
       Our Belief
     </h3>
 
-    <p className="text-xl text-emerald-100 leading-relaxed mb-6">
+    <p className="text-xl text-[emerald-100] leading-relaxed mb-6">
       “When children understand nature, care follows naturally.”
     </p>
 
@@ -152,7 +152,7 @@ const AboutSection = () => {
            C840,60 960,80 1080,70 
            C1200,60 1320,40 1440,50 
            L1440,100 L0,100 Z"
-        fill="#c8d09b"
+        fill="#ffff"
       />
     </svg>
   </div>
