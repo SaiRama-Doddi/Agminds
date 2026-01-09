@@ -9,6 +9,14 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const location = useLocation();
+  
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+};
 
   // Detect scroll
   useEffect(() => {
@@ -23,10 +31,16 @@ const Header = () => {
     setMobileOpen(false);
   }, [location.pathname]);
 
-  const closeAllMenus = () => {
-    setOpenDropdown(null);
-    setMobileOpen(false);
-  };
+
+const closeAllMenus = (scroll = false) => {
+  setOpenDropdown(null);
+  setMobileOpen(false);
+
+  if (scroll) {
+    scrollToTop();
+  }
+};
+
 
   const menuItems = [
     { name: 'Home', path: '/' },
