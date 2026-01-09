@@ -121,9 +121,9 @@ const Header = () => {
             className="lg:hidden p-2 rounded-lg hover:bg-emerald-50 transition-colors duration-300"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-800" />
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-800" />
+              <Menu className="w-6 h-6 text-white" />
             )}
           </button>
         </div>
