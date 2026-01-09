@@ -123,7 +123,7 @@ const Header = () => {
             {isMobileMenuOpen ? (
               <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className="w-6 h-6 text-white" />
+              <Menu className="w-6 h-6 text-black" />
             )}
           </button>
         </div>
