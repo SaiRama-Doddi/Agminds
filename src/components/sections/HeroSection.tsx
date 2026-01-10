@@ -21,10 +21,11 @@ const HeroSection = () => {
         overflow-hidden
         bg-[#664343]
         mt-6
+        font-serifSoft
       "
     >
       {/* subtle texture */}
-      <div className="absolute inset-0 opacity-30 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIj48ZyBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDQiPjxwYXRoIGQ9Ik0zNiAxNmMwLTYuNjI3IDUuMzczLTEyIDEyLTEyczEyIDUuMzczIDEyIDEyLTUuMzczIDEyLTEyIDEyLTEyLTUuMzczLTEyLTEyem0wIDI0YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>
+      <div className="absolute inset-0 opacity-30 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIj48ZyBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDQiPjxwYXRoIGQ9Ik0zNiAxNmMwLTYuNjI3IDUuMzczLTEyIDEyLTEyczEyIDUuMzczIDEyIDEyLTUuMzczIDEyLTEyIDEyLTEyLTUuMzczLTEyLTEyem0wIDI0YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')]" />
 
       {/* floating icons */}
       {floatingIcons.map(({ Icon, delay, position }, index) => (
@@ -48,8 +49,7 @@ const HeroSection = () => {
       {/* content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-
-          {/* headline */}
+          {/* HEADLINE */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ const HeroSection = () => {
               tracking-wide
             "
             style={{
-              color: '#F4F1E8', // soft off-white
+              color: '#F4F1E8',
               fontFamily: "'Chewy', cursive",
               letterSpacing: '0.04em',
             }}
@@ -72,25 +72,24 @@ const HeroSection = () => {
             Helping children reconnect to their true nature
           </motion.h1>
 
-          {/* paragraph */}
-         <motion.p
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.4 }}
-  className="text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed font-serifSoft"
-  style={{
-    color: '#E6EAD8', // light sage
-  }}
->
-  In an increasingly structured and screen-driven world, AgMinds creates
-  space for curiosity, observation, and meaningful understanding of{" "}
-  <span style={{ color: '#C8D6B5', fontWeight: 500 }}>
-    soil, water, food, and natural cycles
-  </span>.
-</motion.p>
+          {/* PARAGRAPH */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+            style={{ color: '#E6EAD8' }}
+          >
+            In an increasingly structured and screen-driven world, AgMinds
+            creates space for curiosity, observation, and meaningful
+            understanding of{' '}
+            <span className="text-[#C8D6B5] font-medium">
+              soil, water, food, and natural cycles
+            </span>
+            .
+          </motion.p>
 
-
-          {/* buttons */}
+          {/* BUTTONS */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

@@ -9,14 +9,14 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const location = useLocation();
-  
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth',
-  });
-};
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
 
   // Detect scroll
   useEffect(() => {
@@ -31,16 +31,11 @@ const scrollToTop = () => {
     setMobileOpen(false);
   }, [location.pathname]);
 
-
-const closeAllMenus = (scroll = false) => {
-  setOpenDropdown(null);
-  setMobileOpen(false);
-
-  if (scroll) {
-    scrollToTop();
-  }
-};
-
+  const closeAllMenus = (scroll = false) => {
+    setOpenDropdown(null);
+    setMobileOpen(false);
+    if (scroll) scrollToTop();
+  };
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -75,7 +70,11 @@ const closeAllMenus = (scroll = false) => {
           }`}
         >
           {/* LOGO */}
-          <Link to="/" onClick={closeAllMenus} className="flex items-center">
+          <Link
+            to="/"
+            onClick={() => closeAllMenus(true)}
+            className="flex items-center"
+          >
             <img
               src="/logo.jpeg"
               alt="Logo"
@@ -112,7 +111,7 @@ const closeAllMenus = (scroll = false) => {
                             <Link
                               key={child.name}
                               to={child.path}
-                              onClick={closeAllMenus}
+                              onClick={() => closeAllMenus()}
                               className="block px-5 py-3 text-sm text-black hover:bg-[#FBF7E8]"
                             >
                               {child.name}
@@ -125,7 +124,7 @@ const closeAllMenus = (scroll = false) => {
                 ) : (
                   <Link
                     to={item.path}
-                    onClick={closeAllMenus}
+                    onClick={() => closeAllMenus()}
                     className="px-4 py-2 hover:underline underline-offset-4"
                   >
                     {item.name}
@@ -143,7 +142,7 @@ const closeAllMenus = (scroll = false) => {
           <div className="hidden lg:flex">
             <Link
               to="/contact"
-              onClick={closeAllMenus}
+              onClick={() => closeAllMenus(true)}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 isScrolled
                   ? 'bg-yellow-400 text-[#664343] hover:bg-gray-100'
@@ -195,7 +194,7 @@ const closeAllMenus = (scroll = false) => {
                           <Link
                             key={child.name}
                             to={child.path}
-                            onClick={closeAllMenus}
+                            onClick={() => closeAllMenus(true)}
                             className="block py-2 text-sm"
                           >
                             {child.name}
@@ -208,7 +207,7 @@ const closeAllMenus = (scroll = false) => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    onClick={closeAllMenus}
+                    onClick={() => closeAllMenus(true)}
                     className="block py-2"
                   >
                     {item.name}

@@ -96,19 +96,13 @@ const AboutSection = () => {
           </motion.h1>
 
 
-            <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6 font-serifSoft"   style={{
-   
-    fontFamily: "'Playfair Display', 'Canela', 'Libre Baskerville', serif"
-  }}>
+            <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 mb-6 font-serifSoft"   >
               Understanding Before{' '}
               <span className="bg-gradient-to-r from-[#776833] to-[#798237] bg-clip-text text-transparent">
                 Protection
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed " style={{
- 
-    fontFamily: "'Inter', 'Source Sans 3', 'IBM Plex Sans', sans-serif"
-  }}>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-serifSoft " >
               AgMinds is an independent education initiative that supports children in reconnecting with nature through concept-based learning.
             </p>
           </motion.div>
