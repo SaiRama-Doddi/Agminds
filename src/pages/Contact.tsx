@@ -89,10 +89,13 @@ const Contact = () => {
           >
             <motion.h1
               className="text-3xl sm:text-4xl lg:text-5xl mb-6 uppercase tracking-wide"
-              style={{
-                fontFamily: "'Chewy', cursive",
-                letterSpacing: '0.04em',
-              }}
+            style={{
+    color: 'black',
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 600, // VERY IMPORTANT for Wix-like look
+    letterSpacing: '0.02em', // subtle, not wide
+    textTransform: 'none', // Wix text is NOT aggressive uppercase
+  }}
             >
               Get in Touch
             </motion.h1>

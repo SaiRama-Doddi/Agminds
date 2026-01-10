@@ -87,10 +87,12 @@ const AboutSection = () => {
               tracking-wide
             "
             style={{
-              color: 'black', // soft off-white
-              fontFamily: "'Chewy', cursive",
-              letterSpacing: '0.04em',
-            }}
+    color: 'black',
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 600, // VERY IMPORTANT for Wix-like look
+    letterSpacing: '0.02em', // subtle, not wide
+    textTransform: 'none', // Wix text is NOT aggressive uppercase
+  }}
           >
             What Makes us Different
           </motion.h1>

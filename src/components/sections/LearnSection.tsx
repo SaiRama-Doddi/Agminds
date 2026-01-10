@@ -57,11 +57,13 @@ const LearnSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-3xl sm:text-4xl lg:text-5xl mb-6 uppercase tracking-wide"
-            style={{
-              color: 'white',
-              fontFamily: "'Chewy', cursive",
-              letterSpacing: '0.04em',
-            }}
+           style={{
+    color: '#F4F1E8',
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 600, // VERY IMPORTANT for Wix-like look
+    letterSpacing: '0.02em', // subtle, not wide
+    textTransform: 'none', // Wix text is NOT aggressive uppercase
+  }}
           >
             Learning Resources
           </motion.h1>

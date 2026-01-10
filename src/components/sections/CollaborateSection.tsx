@@ -94,10 +94,13 @@ const CollaborateSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-3xl sm:text-4xl lg:text-5xl mb-6 uppercase tracking-wide"
-            style={{
-              fontFamily: "'Chewy', cursive",
-              letterSpacing: '0.04em',
-            }}
+          style={{
+    color: 'black',
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 600, // VERY IMPORTANT for Wix-like look
+    letterSpacing: '0.02em', // subtle, not wide
+    textTransform: 'none', // Wix text is NOT aggressive uppercase
+  }}
           >
             Collaborate With Us
           </motion.h1>
@@ -174,7 +177,13 @@ const CollaborateSection = () => {
           <div className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100">
             <h3
               className="text-3xl text-center mb-10"
-              style={{ fontFamily: "'Chewy', cursive" }}
+            style={{
+    color: 'black',
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 600, // VERY IMPORTANT for Wix-like look
+    letterSpacing: '0.02em', // subtle, not wide
+    textTransform: 'none', // Wix text is NOT aggressive uppercase
+  }}
             >
               How Partnership Works
             </h3>
@@ -209,7 +218,13 @@ const CollaborateSection = () => {
           <div className="inline-block bg-[#664343] rounded-2xl p-12 text-white shadow-2xl">
             <h3
               className="text-3xl mb-4"
-              style={{ fontFamily: "'Chewy', cursive" }}
+            style={{
+    color: '#F4F1E8',
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 600, // VERY IMPORTANT for Wix-like look
+    letterSpacing: '0.02em', // subtle, not wide
+    textTransform: 'none', // Wix text is NOT aggressive uppercase
+  }}
             >
               Ready to Collaborate?
             </h3>
