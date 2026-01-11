@@ -6,16 +6,18 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Home', path: '/', hash: '#home' },
-    { name: 'About', path: '/', hash: '#about' },
-    { name: 'Our Approach', path: '/', hash: '#approach' },
-    { name: 'Learn', path: '/', hash: '#learn' },
+    { name: 'Home', path: '/',  },
+    { name: 'About', path: '/about',  },
+    { name: 'Resources', path: '/', },
+    { name: 'Learn', path: '/coming-soon', },
   ];
 
   const resourceLinks = [
-    { name: 'Collaborate', path: '/', hash: '#collaborate' },
-    { name: 'Founder', path: '/', hash: '#founder' },
-    { name: 'Contact Us', path: '/contact' },
+
+      { name: 'Founder Note', path: '/founder' },
+        { name: 'Workshops', path: '/coming-soon' },
+        { name: 'Blogs', path: '/coming-soon' },
+        { name: 'Contact', path: '/contact' },
   ];
 
   const socialLinks = [
@@ -72,7 +74,7 @@ const Footer = () => {
     textTransform: 'none', // Wix text is NOT aggressive uppercase
   }}
           >
-           Agminds
+           AgMinds
           </motion.h1>
   </div>
 
@@ -120,27 +122,27 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path + link.hash}
-                    onClick={() => handleNavClick(link.hash)}
-                    className="text-emerald-100/80 hover:text-emerald-300 transition-colors duration-300 inline-flex items-center group"
-                  >
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
-                    {link.name}
-                  </Link>
+                 <Link
+  to={link.path}
+  className="text-emerald-100/80 hover:text-emerald-300 transition-colors duration-300 inline-flex items-center group"
+>
+  <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+  {link.name}
+</Link>
+
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-emerald-300">Resources</h3>
+            <h3 className="text-lg font-semibold mb-6 text-emerald-300">More</h3>
             <ul className="space-y-3">
               {resourceLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.path + (link.hash || '')}
-                    onClick={() => link.hash && handleNavClick(link.hash)}
+                    to={link.path}
+                    onClick={() => link.path && handleNavClick(link.path)}
                     className="text-emerald-100/80 hover:text-emerald-300 transition-colors duration-300 inline-flex items-center group"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
