@@ -93,16 +93,16 @@ const FounderSection = () => {
 
               <p>
                 Over time, learning has become increasingly structured,
-                outcome-driven, and screen-based. In that process, we&apos;ve
-                lost something essential — the opportunity to slow down,
+                outcome driven, and screen-based. In that process, we&apos;ve
+                lost something essential the opportunity to slow down,
                 observe, and build a relationship with the natural world.
                 AgMinds was created to restore that foundation.
               </p>
 
               <p>
                 This initiative is not about teaching children what to do. It is
-                about helping them understand how nature works — soil, water,
-                food, and natural cycles — so that care, responsibility, and
+                about helping them understand how nature works soil, water,
+                food, and natural cycles so that care, responsibility, and
                 respect emerge naturally.
               </p>
 
@@ -116,7 +116,7 @@ const FounderSection = () => {
               </p>
 
               <p className="text-xl text-white font-semibold pt-4">
-                I believe that understanding is the beginning of change — and
+                I believe that understanding is the beginning of change and
                 that when children are given the language to understand nature,
                 they carry that awareness for life.
               </p>
